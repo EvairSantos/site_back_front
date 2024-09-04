@@ -1,211 +1,102 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>README - Mercadinho</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #bbb 1px solid;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        .content {
-            padding: 20px;
-            background: #fff;
-            margin-top: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        ul li {
-            padding: 5px 0;
-        }
-        .highlight {
-            background: #e0f7fa;
-            transition: background 0.3s ease;
-        }
-        .highlight:hover {
-            background: #b2ebf2;
-        }
-        .animated {
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        .animated.visible {
-            opacity: 1;
-        }
-    </style>
-</head>
-<body>
+Projeto Mercadinho
 
-<header>
-    <h1>Mercadinho</h1>
-</header>
+<!-- data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQBDgMBEQACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQYAB//EAEYQAAIBAwMCBAMEBwMJCQEAAAECAwAEEQUSITFBBhMiURRhcTKBkaEVIzNCk7HRUpLwByRDYnKCwdLhFiVEU2Nkc6LxNP/EABsBAAIDAQEBAAAAAAAAAAAAAAIDAQQFAAYH/8QAOhEAAQMCBAMGAwcEAgMBAAAAAQACAwQRBRIhMRNBURQiMlJhkQZxoRUjQlOBsfAzwdHhNENicvEW/9oADAMBAAIRAxEAPwDpVQZ56V41ekREjO8Y6VPJLdsnPh9wBrkvPZFNrxRBt1BkQp7baFNSRZc110Dy9vNLR3UCDewA6txR8kJeq3aZmIHReBQpjDolzHUWU3QpIsg0QRArPaDLkU2+iPMr/ozI3ZxQ8RRdDOnbuM5xU8VECo/RddxVN1B0yu4q66qdNrhKiCGdNohMushtptFxVNkBrDY1FxLrsqsU2CovdMaLKsbZeuK4ou8rn05H1xUWQ3V5IYmRTG2Wx6+MV17IN1CxlPs9KguTGhS7EjBqAiLUu6UYKWWpeX0rTAbqXNsEOOVShB61Jakg8kxt3KMUF0QCVlTZJTGm4UO0KIs0q8I2AeD3qMoU3KrcSk4VuhqWhC4okITaPpUOupCNtoES+gmzRcerOaqW1VAS3RfhlGCKLKhzptY9yj5VIaklyKIfTT2s0QZkveQ5K/ShexNjcknh280otVgEFN2kIRDIewo8uirPdqhvbqecZzSrImuSM0arJt212VNDlHlgjgYxXWsizILRJnPeusiBQJnCJxUAIidEpFLlxRFuiBpKbxnmkqwCqsK5Sq7GbIUZHeuRXHNCI74xmiR3Q5PTzUhclZhlc0YXJV0ytMuiCFGmDRXRorJmhugJVB6DRboOaMjlhntQEI2qJSmK4IlWOBnXcDGqnvI4X+dMAKBzwD/pLXFq239rb/fMtNa0rnyC230S9rYs8mfMt/4y0bgUgEfwLUS0bB/WW/8AGX+tJy+v1Rh1v/iRuLNjIP1lv/GWmNBshc/X/SuLJhz5tv8AxlobE6Ls/wDLIFzaszoPOt/460xrTZA5w/gR4bJs8TW/8Zf60JaUQeP4FFzG0JCuQfYg5FBZMvdfS0jB2g9aDKsfNqmVh9FcWoC7VEjQKmWOBRBoGpQ31VTdRKdoBY/KhNVCzRHwnFDlulY4EbffVd9ZG47IxE5D8yJjhgy/WpbOxxU5XBOLGPKAXG33FW3NBGiQTrqgTR4U/hSixG0rPeDvUZU0PQGiZMk9K7KiD0F1PahKaCgvbkjmlE2RhKSw+W4qQUQR1b0UBCIIb9ahMCoWKj0nBNciQyMHGcjtUhEqN0rkSWkyPpRhcg5B4FGpCpKu0Vw3RE6Jbz9tNypV1ODLyQR7V2y691dOBihJujaLK/pPBoQiJRZkUQQdxsPAP+saJ2wS2auK05vDENzZRSwTSGWSDzApIGWynH4Mfwq/HTtLL35f4VB1Y8OII0v/AJS114cSzspbiG5DSxXDqse4ZMIcorfXgH76GeFrWFwPNHFVOc4Nty+tlpR+H4viJ45ZX2BkWNlKgkEcseegNQ2lGbU6IDWuABaNeaCPDdmzowuHkXG4yIy7ZTgnCjP86Z2Vlt7oO1v6WQodAtZdTmt3utsMaA72YZDHovtxS207TIW30AVjtJEIdl1J+gXv+yVtMkbTXUikY3SjGxmIPpHsQQOvvVhtOLbqo6rObZL32iw2VvbNDMGuJHCSIWHpO0E/mar1MTI2XurFPUOkeQRYJO/heBLVZVGfKPT/AG2qtmDgFYjeDdfR7Mx3UaNGwdSFKn6jIq2IXMJY5YXEDhmCm41CztZzAZFafG4Qg5YD5+1DNlhZmciY0vNgsC81t3uJV8lnEZ27Q4ABxn/jRQYNVV8fFzgNKrVGKwUcnDcLkJaLUpLlCQdhBwyDqDWLV0T6OUxSbrbo5YaqISx6hT5suc+YfvNVbBW8o6IiXkidWDD2NdlBQmJp9E/Z6gQQY2APdM8EU2Kd0R30VWWAWsVowalZXk5t45lW4Cg+SeGI9x71ux2lZnCz3NMbrFXeHnJ4FTwlGdZep3KwQSsih9ik9eKOKm4jw07LnzZGF1rpO1guZIRc/FxssihlQJgKMdOasVdHDcMjA09dUqnnltneb3Q5bqRcjy0l2kbvLbBUHvj2qs3C5HgnYBOfXtjIHMr0xWVdysCPkc1kkFu4WkCDsgKeD3A7UBKYFa4jVCrI24MM/ShBRNKAaJMBQzUhEFRulSESBJ0o1yW6GiUrzDKV3NclXi30wGyEi6LPNJK0e5QgjUAAVwGiBrbIisHX50B0KeNkvcJIDgHijaQocNEzFlrWMF0QpkNvOM854/GisHCyWLtup57zwDHC5c/0qOG5RnHREEK43JLBzx9r/pUcM9R7rs46KoVTkGe3z0+2f6V3DI5hTnHRBl07PMc8HHI9Z/pRC/UIbjoVaOJI4JUkaFpWI2tvPp/KiyA8x7rhIQ4W2Slyk6ExLdwiF/tJ5pAP3YprA4C1wlSFrng2VoLXDf8A9MBHX9oev4Ut7TzRtcLbJu4xIIVZ93lx7Sw7nJP4c0skXXNC1tR1qSIjTNBz+qUIbg55AAAC/wBa9JHTumdxH7bry75WwtDAo0qzj09JHCtJczHfLIeWY++fYdvvrz+I2qJSG7DZa9I0tZcjdJappAed7+1d1u8byA5CuR2I711DiNTROa0nuDf5JlXQQVcbhlGbkUl8TeSEF9Cn6d3SvSyY7h0hu7X9F5qL4er4xZr7fK6809yBxoc38RaAYxhnlHsm/YeI/m/VLtc3YPGhT5PH7RaYMXwzyj2SzgOJ8pfqrWF49xeNDJpstsypv3O4PU4AwPv/AANX6OakrQeGwWHos3EKWsw/KZJSSfVOfALqtj5glZJkmMlrKjYKDABIPXDEHj6VgTOghxB2Qdw2B+fVb9I2Z1AOKbv3WvpXiK485bLW3O7pHcHgN/tf1q3PScPVuoS4ZxIPULellgiLZw5A+yuKpZDdP05pSW6dsCL0pjjPtQiIDU7ogemyW0/fb6jcXMiRSI6quGXnj2p8tW1kAitdLZTEymQlC10QLG0sEa54Pfr7UilhhmeGu0TppZI2FzdUpp4kS2XzmYu3qw37uazcSfG6oIiAAGmiu0LZBCDIdTqjyOqjLHAqi1rnGzQrjntjGZx0S639tE5JcdCOVP8ASn9ln8qV2yBw8SZtbG7vYvMtGtRH/wCrNtJ+4A1YpqEStN3WISqmv4RGUAhC/RWp5bD6cQDggXTf8tWHYYACc6SzFHEju7rOmlQMQx6ccDP8qoinkIuGlabqqFps5yAsiOcIcn2rnQvZ4gQiZURSaNN1ZeuKBOQZlKnK0QXFe8osuc1N1FkOSaO0jLzOqjPGWxmpax0hs0KS4NGqXk1eyfEbShW7h+KZ2WVqDiMPNLy64gla3gCssa5Zycg9MAU1lICLvQOmtoFRNRW5IzbyKe5FcYMvNTmunUuV2cLLgDn00oxlTe26Uk1O2Qkp5ufbbRineVBeArWWtrNO0YB9IzkiukpsrboRNc2W4pilUcDdiqhBCMlZuoRHzBgHA+VOjdohcFWHg1zlITe/aooLKSt+ERxFcR7cIAACGBPc/If1r1T3ERkNK8kIwZAXId5I0tuQiGRgQfL6ZrJgEcModItKYPmjLWaJXEhiJOnuWA+x6ct8utX3VtGO84aD0VRtBU2sHfVethItyLm5iFnbqCqqcbnJ98GsjEquOttFSx+yvUVO6iaX1EmvqdE1JqNovHnY+ZU1mjC64/8AUVc+0KUbyBLyanZBWPn7sD7Ko2T9KJuE17jYRH2RfadI3/sCxI3nvpxbqSkt2xeVj1RBgHHyAwv1Oe9e1nczBcMs3xnb5ryETHYxiXEPhb+w/wA810RCwARRoFRThQPbt+GK8tE4vYCSvUOADiANFN35V5ECqqJxlGyPlwfnXoYZXmMZ9lhyRtEhLFFjNKgigLsxQYBIxu+tQ9rUbbnVNS3kcYIkwoz0waSIXP8ACjdI1g1XrWf4iNijkDPQjFVqmPhu1T4H5xopKgsAw4zkk1UeS1hcE9li4BTMoGeB91ZFiN1psF1m3Opz6ZG9xbNtlAwp4PJ46GrdCTxhZVcVeIqRzrrMu/F+uqxkN4OnQRrj+Vb2dx0XjW1sjjqldVvTeXEMpkz+pDMQeCTVSmY4ZnHmVbxeoz8NrTsEmuo/C2skPlIyNIr7i3K49vupkkZfrdVKSocxwv1W3N4q1aASW9pd+XbxkKp2AkcfT3rqcubEAVbxKtIqTk2V21+XVhHayzM7KmXUjA3dCRgVUrs5br1WtglS2R7gd7KmOelZ7QXaNF16VxDSc2isYXbqjY+lE5j2eIEfohbIxxs0gqnQYoLpzbXsue8YcWMJ9phV+g8ZSKu2RYWpxYfzezCtEFUm6LQ8N6VLq9x8NaKhkVC53sFHGO/vzVaeQRjVGXNaLldxF4XmsLYSXVsI1yONwJHzOKoPmugNS0+FXfT9qmRYysIJR5Quce9C0ucLqBKXaDdc54n0yK2vxFZSFo3UGN5cA9cHPtyDVuCQubfonBxI726Qisk0+8aL4yC4DJndF0B9qbUDuoIzfktCG4aKUYOVPSqRZdNzWWwqtNFlo2wR1xSeDINcp9kfFZ5h7pSS22HK9+1cHdUdroEzEKAeopjQoK6hZWneRlD+hQW56Dtz/wDtb7yAF5pguVS5Xdblky3I9IHX76QMofmcE43c3K02Q9k01sY4IyrtwGY8D50uqraaNhu0KYKaQuF3aKb7HlzTS73Fsu1QOSSBz0q18PQCKA1BGp2VDGp3PlEDTYLnCL18O2oaVAT/AKM27Nt+Wd/NPdjOIBxywEj5IRg+GkDPPr81b4S8KeYdV0raDjd8I3/PQ/beInTs59lP2Lhf5/1/2tPR/gbTIe/huLiVgGkwFB7BQB0HYdTXn8UdiNYTJNGQB6FbGHDD6UCKneCT6i5Tt9bOWkZcNg5wOKVQ1TSBEQrE0Lrl4KgwS2llHeOr7JGIDEdflXpKe0kQAWHP3JCUC5mEbxvC+/euSCucN7UY10KgnmEyN88UckoRT/ZYYb8aWC5pICYQ124RR5UOSs0an2JHX260uTTxoo7OHdQVN/IEYuEw/qjUZyvSq1RLSXMbGXuN7806CGr0fI+xvsByTTnaD15715/ktwCxWXfQw3E1ulzNFDBvLM8v2cgcDqO/z7VpYa0F5Kx8ecOExrtrrKmTS2Cu00cJIyysxYKeeMhucYBznvWtcXXl2RxaFEs47HTbE+bIGldwdsqlVaPPVTjPTPfmisApkDQe8oln0dpWjndoi64x5W7B9+Qe3FQ1wR2jvZRa2VjFFHDcECRuW9W10OQMFSc9MtnHQVxsAlujjLu8UGU2MG24s545JACgjXIbaR+9z29P3g1YhoO29w7J8FQKN3Fj31SNxLczkkuxBOAF9I/AV6iCip6dgaxo0VWerlneTIdV62F2CBB53XOFB5NNfFC64eAUtszm+AkLTt7qQnZcJtcHB4xXkMawRsTDUU+3ML0+EYyZHCCbfkVn+LYRNa26blQmQ+phkDjvWFh575Xoaskssg+HNIfWkkjIwi9ZC2FX760nDVVmkBtyuj0jwpqWmXEhijW7t5U2MI5RyM5BB55BqtPC6Vtgo47G7my6mGwu5YfKjs2TIAkkkfJIyO2TgVQbRS31SpJWXvdTcWUaW/k3N+iov+jVtx79h/OrApgNHFAzXUMWUun6Xft515cT3N1yGiSPcfTnPXgDirEMUbe6CnF0ulhYLF1Y6bJav+jbJovLZSZGPPXkHt3poZxQWNGpRTNfCM7zssy3PlnMBx7txk16mjwmOBgc8XJXkqrFHzPs02CtIZnYmMyM3+ryfxrQEQGmlv0VMyX13K9a38yNsly699x9Q++qFfgkFUwlgs/e6uUWLzUrgH6t6f3R7iPzVDJjk9q8E5joXmN4sQvbskbKxsjTcFdJqFm1nci2KiN5FVyoOTj6DkV6PgmQEkaBeV47WEAblEhKQW5N1+zJzuC7gcnjGKwJKapa8knKP3WyJonju94qLfVbS4uRb26SByCcuQdwHU8dPpSK6jjZEJmnUrqeZ7pCw6BZusTGK7Is7nbKcF0KAr9eo5/GtfAHV/APCYCwddFmYwygMg45Id6IFva6hew+bBqFvj/4G4PseabP8TT08hifFYj1So/hukmYHseSCpms9Ut4Gmm1CBEjGSfJb/moWfFM0rwxkVyfVc/4XpGNLnPNglbIXd1dRxXN7GqNIrfsyC2CDjO7gn51oYpV18dI7iRgNIt13VWgocO7S3hvOYG/RaOt63Jb6isOnqZEMal4/LDqWBOevQdO9eewrJwDG4d4mw6rfqWSZ+ITo3Upmw1e3exlsb3ZGLjLCJSxCMMeoZGB24ya9K+nNO5mblovPsmbUh9tym9Ms0miuGSaPakZaLZIGVm7jI6fhUSBheDtdHG6RrCN7LndIkvdavdS026doojGHhaHKHPQjdn6VXxGPgODmKxRSiZl3rZ07w38BAy3LiTd6mGMA9uRWTU1RkcD0V6CNrAQFn6ILg31ytrZtHbbmXksV68EZOB07CprHwmnBb4yppRIJzfw8ltvEVyrkc96xCdVstdm1Wj4aSFUvluo1ngYKChTfnr2rXwrd11m4vlLG5gkLnStJS43DSEUAkkeVLgfQHj8q1wwLCDG+Vb93+jn0aCG6tYplEYKpJCx2j24HFdYFFKGHSyytIi0i3vi8djaqcgIwhctnt1HH41waFDQ0G9kTVbTT7mR5LiwWWUEjzfLk3Zx7r1+81xAspe0F17LirtbaDXpFhtEhS3VVCKp5yvJO7nOTW7hzPuu7usaskDHiw0TywTXyYsNyYbB8116cnAH+PbvUVVdBQ2M9z8h+6mBk1V/R0ISpttRMssQndjGf1hVuMnn/jTm4hS8Fkh0DtrjVLyVAkcwa23Qbiwnttkk+ct3zmiiraatY9kRvYJcjZqaRsj+qX1RBJFCzDIwT+VeCphaVw6L6i0udGHeiZt2js9Cs7aGS3ilvHDO0nC7FPAOOxPHFXATzUQMGd0hF7Dl6rUGoWi20iylIriMsImtyQpC4ViMknG5j1pb2vDgWoAwtcPrf1UzQX0gVtPYtH5eN+98AkSHOW+78uxqeG55tb+armTwt0k6/wBx/tbNvpMNwEnu7qJJCigW3AXksFGR1+1+JB71UErnXcMvoL/uqD6rJ3GjTqsPQha3tzi7ldZHncPDt9LEDoT9xqJ32hzfobdFdmdIxtmDRH8ZfCDSbaGxtvhwbgAqsmVJxzxWngb45KsWJ0GxXmsUlmbCQTukbW4j2xxRQO8uAoxtAJ+leumDYmukcbAarzUNQXEMaLko9/DcWy/EyRD7QV2WbOMfunAqnR4lT1b+C0nqLjl1VmphmgZnIFkp8BPcjEVjDGdoP2vVg8jr3P8Awp0mJU0PifpdJbDNLszks+NmjkaPHAAIH1//ACvMfEUbDVB7PxC69b8NzONIWyfhJC1Nc167lvDJa3G4SBCCu1ZCNoPX7+gragpHGHQ67rCkqWCU3FuV1naNfyW2oNc38mFlGJcDtk4J/GsbGcPnMIeCtnCq6B73R7dFv2kmmTXjfDSRi4TqUIBYV5ORs7WAPvZbwYPE1Yut2cr38k9pJFKkhyf1gBVq9dgmLMpabhTMIttYLzuJYe6omzxuGq2dCtjYaYBcyxlmcuzBhgE9s15vFas11Y6Ro+XVbVHF2aAMJRNYijvtLkjjniUkgoxYbSwIOD+FJoXvp6pjy06FHUZZIS2+hXNQ2txbXNvNdL5cCSK+Q4bcVOQB75xyelewxHHYamldDGDd2mvJYmH4NJHOHutYapq4v1uWaXeiqQFXkYx/jvQ/D2F5SJ5eWyH4hxC0fZYdepH7JeW0ivbiANJsUuFL7sbRkV6SsibNEXDkvMUUz4ZQOu63YLGLS/EM8FvN8TmNhHgj1Erx0+dZjmB9HxTutHjvZV8M7LB0jVb8eONLMrOikmGZQNqISpycdByB1qpXNz0oLVfgOSUtedV9RuYy+Q/qU/nXk3Fa7SFnTlVJUDAHtSXE81YYFnOysTQXVxostfwwVC3ynvF0B5PXpWphrw0PJWfiLS8NaFhWt5cwvaQtczz+UpSR5Dkkc4/4c/KuirC6UPXNoxFT5H79V3tiQdMhGcFl5PvW7e6ySNdUlHI6zncQc/lXXXEBcb48u7iKNLfzSsLepVRirNICepHaq8xdcdFtYYxoDn5dVzsl3PY30Wt6hGbhL1GjYEAbJExgHI/s4/E1q4ZIXx8MmxWHjtMyOozsGlk7Dq1rPeQ3JlitJoIgiu0e4P17DpgY+/6VZxOkmdT8FsefN0NrLKpHRiYSEhpHVVuvEFvFdS/o23Hlu2XZsjcexx9c1WpcBmlgYKyTVu3p6JktbGx5MLdDus+61O4vRFbsFBHCBSe/U1clhp8LhklG5CVC2avnZG4aDdX1UrFDGvZFx9a8VS95zndV9FZ3GZeiU0LV5LeHayRSBfsb0DVZeXNNgoigbM03T7eK5AQnw0MeQYx5cSjPO729+frTmyOyrPmpWRv0OiSvtevru2EJJZsYDZ3Upznk3V+GClYM19V19hetd2yyaWkqwW8axqHY5U8Zzz7HrzgjFY5gZGHCXc6qi5rQbu5rmop7jStYc2scQKpsfL+ZkEk5J9/erpjbURjMU8OzMDTtdNeJHtJtLMkF+sk0GHMLEKwwecg8nrjirWGzugq23ZYbXWViUTp4C0DbVRbeJrSWMKbTahZSWGNwx34/lXsZqOSaBwY65IO68q2RjJAXN2Teoa7p720qbkui8m5ERNm3j949zXn8PwStbK11slhYkm9/l6LRqq2ncwg97W4HT5rOHiO7xuIjVxkBwMEd+xrcPw/Sagk20O/RZpr6gjl/lL2Lbo3ncFjK2R9O39fvryWNVAqKrubN09l7PBaM09IM+7tSs+8uX1LTpnhg2yadORGQP3VOD9xGa9r3S3MzkvENBilAkdcOCbhuriTTJp7GETSswI9IYHhf8ffRk3BcNbpBha2QMedEDUWb4CF7m3WC53jY0eFb5j8KqVtOyaGxHeV7DJzBVWY7u801cnUUWze0sI2idQWLIMN99MlL2ljI236qvFBTvD3TvI6IzXWJBbrH6DKjGMDKhsN2/Dis+emhGJxvaBexur9M+Y4XLmdoCLfJVS4c6v5LRIyKrEIAMgkJzVhkIFe93/iNUp77YY3vfiKFryy3lldNYRDdsdGjjbv0OPY/KhqMKgfJxgNUdJi00ERgcdDzPJB1iQ/pDSQYFX9d0wMNwKvPADmAKhAbskddE1ayub5GSNFi3gflTJGktLGndKp5GR952qteyTx3enx2ym2YuVZowASoU5A9qXPGCGs5FHTPyB7xyS2p+IBpsiqLNGiRwr5+0fn86GZ7IANLjZNho3TguL9d13HhzUp5opbeQPtRVeMsc4Bzx+VeY+IKKOF7ZWfiW1gc7pWujcb5U5cy/q2XBJboa8yV6Rg1CXVCw3HgClkKwXJrT7uKyuBJIDtIIOBk06mmbG+7tlVnBe2wS15d2C3Lyxsc/wDx1bbJBfuhKaZXDKVv+HtQtp9EVGlTehICuwB/OteCZr23VGeJzXoccyq8rSOvTjMgprpGNBJKWInuNrLCvrnT7+Hbdo29JS6+jIBz71Q7fDaxWtDDMwWbsUnrEtrf6abJgZFPXKbcc9R86B+I5ReE6oxS8QWmFwuLn0a/tSRastxEPs7jtbFbVJ8RMAAlFli1OAm94zdVhsNTkYKYViH9pm4/CrT/AIjp2i7QSq8eAzk66LZ0/T0tNzOxklP7xHT6V5fEMTnrXDPsvR0NBFSNOUapXX5TEI+OGBUZ6Z9qGjF7hWpH5AsuCW2EYeBtqlQWVv3T3qyWOJTIJmMju42Ci6SWa2heMLsDBgyDJyByDTAMp1VOc3OiSivfhpf2ig7uEHFSWXSeJZPT62yYSzd7eQclwxU5JycD+tQYQdxdE2Rjz3iqy6okU/xMUwkdwDK0h5ZsDrUiMbLpJQNAkYtSMty05t5rhsEcRlsA+3FGRl3IUMnBba2q0l0W6EAlgfaSMmOT+tOpccdA7I/UKhV4M2cZ2aFDitdSeTy1t1Le+/itj/8AQ07W3uso4HUE2sn4NHuAQ984OOkanj7z3rHr/iCSduSLQdVrUOBxwuD5dSm5WKBQgrAbqt+9gtHVJhotwlvfXFoS8SswQhSCRk9T0zn8q93RVralhc/TUiy+aTYfw35Y7nndYWkTSQaXdQ2I3ZdzCylSAD9kHmrUILWGyipYHStc/wCRU6wZ59MaO7VTNHhkmJCgH5nP1pj2dzXdKp8jZczNuYRB4iNzHbWdrexARg5Xcrbjjp1oRa4sdVJgLWuzjT9kteX9udTguC8cUkZ/WKZAMnBGfzqHNZnzDcJkUbxA6I7HZeTVLdNXN+J4trIU271J6Lz1+Rqbsz5lDoXugEVkS0v4UmE9pdQefLITLAZBh8sf/sM9aKzbaFA+Mv0ePkf5yQ9Y1KN7+wlleNPhZd7K8ignp86GTKXDlZHBC5sTm73C0FspPEYkWyYGUxny2VhjIBPUUisnjhhL1NJC4S8KybttMutWlX1fCyadGZQ7kbd4GMNjseaVXVLYWMe0akhHR0we+Rp2O6xY7/StWu4naKGS4VsgM42ZHcknH406Wopgc0m45Lo6OsaCyM91fQ9HsGgtfPeSN5JQP2TblVewBHX/AK14/Ga7tcndFmhegwqi7KzU3J3TLR5J3YIFYZuNFsg6pW8n+Hhd0CZQZ9S5Hz4o4XASC4ujAD3AFCiOqTwmX4GzYAZyYu341rdma7XIET2U7XZXPKX/AF8nL2dkfpAT+PNdwGeUIzTwt/EfdBdI1LEvpCSd1aB85/Cp4UY5BcGDkHW/RBYI8m6W90yNAOkQdcn+7Spqdr9rLrOa7usd+qt/mpUf95WZ+jP/AMtVuyOHMJgdId2FDb4UKzDUbZsAEBS3Of8AdqOzOAvcKbv5tKoORnFVyUYIOyg1wXKccVK5Au7WO6haGdNyt+I+lHG90bszUD2hwsVzT+CNafKwSFoecN5bEkfdWy2p0vkKyZIM/dDwjp4R1eG1Ecz3BUHols4pbqk3vkKfHALWLwoPhm7VPTDqTkdcQP8A0qe0yHZqjgxjdyYt/Bu5TJJpd67jvIHH4g0D5ankNFLYqbckKLfS4lGYYEXHQAVVfO7ZxVlsLNwFoQ3PklY9u3nrikubm1TRZqblcSIccZpTRqjKSsT/AJyec02TZC3daboHGO9IB5I1n3cBU8DvTmusoK6DQ7eE6FZOYkaRoEZyy5YszKCT78E/j2qKhxdUT5idCbLIivw2FvO37LIlsbT/ALT6rFEFicWsUioMBSfVnj34Fep+GZpHUveN9bLBx5jc11axiiuNZs0njV0y5KsMjIXjinfFMr2UV28yqfw6xpqHXGwWh4ms4B4e1Bjbw7lt/MVlQZB55rx8T+HURcMkXsvWOGaN2YI+gadp40eyZ7VSzxLnCrknAJJyD71E8l3vllc4623suYLAAAbJ57TSV4aGMMOzeXx+VI48e7c3pqj7w6JW6ttHFvOZ0tBb7TuaTyyQPuA+XvXGV5e0wZr3F9Tuh0sQ+yw/8ndojeHEmngT4ia5KzOygt1A6n2rUxRzn4lw3k202Pok0wa2nvGE7qmowaAs13HHGl3cWYRFROr7hz92aZg7XTZg5x4bDc3VevAbbKO87RL6D4bYWvxGrM0k0oDi3Ykxp7bhkbjS8Sxt9VMGMOVgR0dBHTN0F3LqIoLcRqvk5J6DAT8AAf5mst8kAcdHO9dQrwMhG9kKWwjRjPp58ibqRjhv9pejD8D7GmxyMkHduR0S3Bw1IXorr4iAttKujFJEJyVYfPv7j5UDxbXkdkxvqlp4/NDRycI3pY/WoZ4wmg2XU6dbMLC128sEBG7pj2Neqa3QLJnkBkJSl/rOl20wgeKJ5HO1gmOPpS5JWM5J8VNO9hfe1kn+i7a41mVhCwiMaSLxxk5zS8jXuvbdObVSCAao83hy2uG3wlIl/eUUzgDkhZiL2ixufqgN4YjW5QSyg2/Rip/DtUCAEonYm4N0Gq5rxLp8FrfQxxTCcPKSTtx9lRwcVUqWBos3mrsFQ6WLv6LNuNRtoHI3F29lGcffTqX4eqpmhzrNHrus2oxyCI5Wi/yQo9UtJDtzJGT3ZMirUnwxO0XY4FJj+IYSbOaQn4WVjuXDDHY156aCSB+SQWK24pmTMzMNwpPHH5ilJy6nQtYS10zMpCJEoDsxJJ+g7mvQ0V5IwGjVedrrRvJJ0SUmoRSXLy3+nXlnA3qFxPJhMDnnDZT7PcCrxa4aNIJVJjm3ubhD0+/ludRj+F03UEtSWYXjrtXjJ6N6iCcjPTkdjU5MrCHEXXF+d97Lf1aCQaeTFd3Ltt9Qi27unXn/ABzSC0Pba9k5ri03tey5iPQooAx3XnGP/L/rVB+HMcf6n7LRZibrXLPqjR+F9Mu2LTXl3Cw56Jz+Rqfs9rNMxQjEnOF8oWTrsGnaXsit7uZ2P2jIQRj5Y70bMHknI4Sg4wyIHifRYtlqMFvI37Qhj18ocfnV5/w1I5vjF1Tb8QR5vAtiG6hmXMUgY9x3FYdZhdRR6vFwtikxGCq0bv0Uy7TgnvWdbor4F9ltaOYp9FsZosqjwxsnyUupGfnzXPu2ae6y2EFrbfzRJal4Ut9Z1KS+N7fQSeWsbeRPCoIBPZhkdT+VXMPraykgyxFtj7qtUQQTO+8GqnSPCkGk6ktyL69ndVIVZ54mXnjooBzU4lX1dTAWzOBF+S6npoIXExDUprxPx4c1E/8AtP61SZ/yIf0Vj8DkXRWxo1jgDmJeNwX91e5IFHJCZmloNu8d1wdlsfRZGreCLe+vri+e+uo2mO5kja3xn6sK0KPEKylhELC23zVaanhlOZ1wk5vBcWm2U19a6jcSSQQtIEmjiZDgZwdoB7djRR/EdSKhrJGg62SJMMhfGQ0laXgSNk0XBDI3xznDdftjBqtihDsXJCsUn/GA6BJ63ai78X+H45Buj8mR39srtIFIppzFR1Fuo/unPjDpmk8l0GrXM6afK9jHvuyoWAMcjexwDx9KpQ0ZEzGSbHX9Eb5O6cvJaFv4c0+PT44r63ivLkKPNu5VBld+53dRz0x07YrVe8N0YLBUwXHmsnTpZVfULKSYyvZTYSZjlmXAZS3zHTPyrOqmiGVksfPVXInZm6q8v6vVidpUTwbypGOVIx+TgfdTp2hpc0bD+65huAUK7fGW+WSM0qLWQJ3IrZvL+8t9Se2ilKjy0MSgLxkLzz2yG+n4V6p+YWyrJgMWZ3F/m6R+J1IxzLIYncghMeWN2Q2D9xx+FJIeQbhXTJTBwIfotLTb/wAmOa71ANhdkQ2Yb354+hpkeguVVqDGSGxG917UdUt7nbb2121szA5Jg3FvfvQyPB0BTqaBzDnLbpXTb+20pbmKW5uLhgFdcJgkFWbgZ7BTn6ChhHDJN11TCZXZ2tsub8b3sF9fQxWbO0kauJTjGDkrj/65+hFbmGUkcj+M7XosOur5Y2GBp+a5w2MzH0W8hHTCqTXoS9v4isMX2AUppN25I+Gl9PXjGK4yRjcqQHHcJuNLiwdUmTZu6DINZOLUcdfA4jxDYrQwyufR1AH4TuFoDoPnzXzfVfQgntE2tqkBlR5Y4F80RqNwLE4BI+XOK9HhdjAV5zFdJgugv72Gc/rbOeVFPmhXjGCw6YB4LcjA/pxZc0x80mK0t0C71ESWshFtPkxFvs9Bxx+JOfbBz0rnRWFyUsSjNZCtbebxBayyzXE1vpqMUjjgcxvOw4Z2bqFyDtAxnBOcYpl2wtGlygs6Rx1sAgnRb+ZTa/pO4gsV4Dphp5Accbv3VHTJBY8dMZI8Rg7xaCfoiLCVgeIdAfQBFqWl6je8SBZI7iUyZz3Gau00jah/De0XVaoa6FudrkmNGmu8XFxOzPKNx/Uufz6VtslbGMjQBZY5DnnM4q0WgIisZHmwOQY0XDD6k+9d2i/h1RhgG68lhaRb3jlcOikeuRFy2OOPaokc6VhY8aH0UNcInB7TqEe3lEyHd1HFfOcVpew1ToxtyXvsLqzW0wed+fzW94by3hjSjjG61h4I6epKoy61FSR6pEdgxrf5slL+TWZNXvjaTuLO2jiJWNEJDMGyeQePTWlglFQVEA7RuSbLMxSqqoLGEaJmyvzLe2UInuGdywlSUIQcKTkEKCOanGcHjoYeJGBYlDheJmrJa8d4BE8TLv8ADuoqvJNpWWzSogv6LVJ7jkbQxjR7E/8ApL14z6VoKn+m7/2Klp1Cx9QuvEY1WdYIX+CDfqmSFWyPvYVco4cM4A4xOf0VeY1eb7u1vVEuru6NhKLq01a5TaRLEIo0Vl7gkZIH05qYYaITjWw/noue6cM21THhC6e90+S6kADzag7kLwBlgePlg1FcxseJhjTcBFTuJpwToVl+Jb5NN17RLqRwkESEsPcMVU4+41NDTCekqBzuCP0UTSlkzF1UkCT2zx7sK3qDp7dQw+lUWOc5jXDxM5J77XI6oc2oa6EEcVnZTSgYFy05VfqV25+4GndqhdcuP6JXCI2QtKsTYxSBpDcXE8pmupyMbmPU4H0AA+lJJ7XLdwysH0Cee43RCMhkvXlGNkMflgDpuJy34ekfUGhDMjDY3ufopbqlJWyxbP2fV8j8jTI9HBPy5tF2kfkXmnxM0EEzrGpAdAwU4HTINesDrjRYUkQZJlcvQ2gdOdOsl7HfCo/lXXcVDo4WnVLS6atwLu1LRROxRx5SAKp5xkd6gXOhUSDuhzNLJQaGV4a4sw0XOWikzn67/nQ5G3TePUkaHdRcaFEzJHHPZea+dzLG5JODnnf0wSPvqOE1EampLe8Vx93p81t4vvbWFy05AnErenduAyQPbLdK36FzWRarzNdG98hLTrumY4/KuYobtZriWdVePypcLj945+XPTik4hLK2HiwvDGt3vuTyt811LH38koLienIIb2tl8VOHa4eAFmWQPxwORnuc4qs3EK000ZAbxDa46X2RupIRK8OJyjbVLatBZWiRfDjAZSShPPyNXsOqqqUSdo1y81Xq6aJhjEJ3Xof2S++K8BMQZXW6r6VCCImg9Auh8HRf95STZIxGBx35zWrQf0reqycR/qD5LZ1nU7WxZ3uZ44hyQD1J9gOprRbG5xs1Z2cNC+f6542N5f21hYeasLTxhlXHmS+ocHH2V9+5Hyq4yARtJOpVZ0he4AaBdp4dsZx4dsGF3KhFvGDgd8ZP3Z5weg46Uh0rSdkzgm+6ubFlZD8dcehSPtn1e5Pz+lKDw1226sSHO23RcP4t1aGa6hsobhriNJMyTE+nfz6V5/GtWjbkIeRZZFbdzMrU7FpE2FM7N5e5dyI5Jwe+KuVVYI4nOZuAd/RZUVI90gDjomNR0i1+HdrW2Dyxy7CqPvJHz9jXncNxqoMwFQ+zS2+otr6dVr1uGR8P7puoPIqP0bp6p6t8WU3Hc2NvB/pT/tbEHPGWxF7bbhJNBTBpcbg2WJbOd0oXoNo59+f+lUfiazqpoHQLf+FmltIb9V2dnby29olrNZTyNAvlh0XcrAHIb6nANecLJc73MIs5W8zbAHkuYfxFPZeKb6aB5LSRxGgguFKrIFB5wf8Aa/KvWYFRw9k4c9ibn9Fh4pPMJWujvYLUn1y1lu7W7l08wXETHzGi6OpUjIHv3pmJ4NNLAY4X3F7gFJocQhjkzPbY2TE88OtabPY2OYmnj8vfL6Ao9yTWAMKr2SsdM3RvRa/bqYtIY7daGnJPYWUNs9sztEgQsm11bHcGkPoK4SOMY0JTm1UBb3nL1zq0dsM3ETqPYxj/AIUxuHYq7QAfRA6tpW7uWe/iSzdZfKhuGkKnbiHaM/XoPvo5MDxKd7eK0WHySvtSkaCWuWV4V1i2tI10qUPPdiQOvw8RkB4XrjpgijxOhnhq+LEQjpKkSxd4WW8mj295qkN/eWZX4OExwJMO5IycfQCs2F0kMbm31JubKw6zyEURTac2LVTNajlY8+uP5L7j5Up9nuzg2d1TBoLFE/SdtjDwurH91o2BP3CizSHxMaSutbYoVxeTTJ5drG1vF/5jLg/7q+/zNQ55OjvYImgHZLxooURRLtVe1Lc4nUp4bZVuolitp37iM/yo4jd4CazxBbcN1aabojX8U29Uh3MpYHkD2+or1IcGR3CzJI5JqjhlvNZdt41LxbpI+i5LUkVJVx+EgGwKPoOsTardTXlvC+07VkBH2SM0UUhc5LqaVtOwRk/Jb0kth8X+vZRMeSGPUU4loNis5glc27dlee+gjhYwqrELnCCpLm8kPDkPiXzz/KGLkXtjqFruEpiaOQp6d6g54+nNPpawQSBsmxUVOH8aHPHuP2XPaf4lubdneN0ZynlgzAttAJJA9utbVXh9JiLWiS9hrobXWFFNNTOJA90K81SW7k8yZowOm1F2r+FWqKkgpWZI7/Mm5SJ5ZJiC76KbBWvJcKoESnLN7/KsnHMWZDEY4z3nLVwfC3SzCV40GoW8P8YrwS9uOixL4aq2uKNPN+IvJ5+FBPqz35xXpsGyCLvdV5zGM3E06LM1LSNTa4aW7upbaM5Ej3sip+QPNa/FbsFlhqppM9hZXsNtp0hMrH9dfOmPSOSka9gcEbjzzQuY5zSdlIcGnRd5D/lJ0tNDiFva3ZIUYXZgCqzaQkXJTXTgGy5LV/HN/qsgtbONgr8eVHxv+p6n8qsRwti1SnPc9Z1xbT28LIY/idRbHmbBlbVeu0Y/eNGx13Zr6IXAWsmNP8Q3RA3XMysD0Ldx71pMME8ZjeBqs97JYnZmnRadz4iu7mIxgwxhjlzCmwsfmc0imwaigeHi5ttc7IpayeRuU6fJZz3I3bVw0v7q+9X6isipoy4m3okQUb6iQNaFrWsPlwhSST1Y/Ovm9VVGpndK/mvodJTNpoGxN5L6U0wQAdfbms4FUciXvtP0/WYPK1C1jmGOGYepfoadHUPjN2lLfGCNVz03geeBDJouqOqDpDcrvX7jW1T47LG2zlnTYfDIdllz6N4gh/aaZbXIH70EmP51qR/EUX4lRfg3lKClnqzekeH5s+3nD+tP+3qY80v7Hk8yYj0XX5XATS7W2z3nkyR+FV3/ABFGPCnMwfzOWra+CJ7gg61qjyL18m3GxT8iay6jHJpNG6K9Fh8MfLVdVpemWGkweRYWyQoepUepvqetZT53P8RurgYAh3DlGK9s+1VHp7Qlmb3pB13TMqDI5waIDSykNQDlmyQB8hXAWTGtsp6Lx1rkSFIqyxvHMWAcY9PWjjcGPDiFILm6t3WRPoUDE4ebDElsynmtDtsflThPP6JRvD8anILfUua7tsXlU8ec81oaZdaj4fBFlaGeJzkh2AGPrmr0MhAzMCXO2KpaBM6xCytSvdSu9TmvJLXaZOAnmL6R7dah4e92Yp0L6eKIRgqqXmqrqHxlrG8LgbRtkUgDH1qGh7TcFSX0rmZXahPT3Gpap5cl8rvJAchvTjb7cGhqLujOZA008YyxGyzLjSbK5bc8e1jyWQ4NIgxCphFmuSJqGnl1c1Uh0GxRtxEkmOzvkU2XF6yQWLkqPCqRhvlWjEgjG0BVQdFArOc4k3OpV8NsLBWA680JRrjdb1e6ttfnS2vJoo1jVSqSFQT36V6zCWAQXK8tijy6awRrS3t7qwjnnEdxcMDzM2SSenJNaRICzxmJAVb23tI1mlmtEQDljFMOAF52j7s1F7tNl1rOsmbKfQxYQQWj6rPKRtETFUGfuqAJC3kpOW+iHKt9FDIulWENiCpJKZeVh3G4iuDQd12awTGia1P4fsHt7qzwzk7XZck+4qXMDjdDctWPp6x3puEMYyZS/PbNZVe98Mgc02Wth7GSxlrhdO3GlRxgFHk+YLVWbi1UdMysuwunB2XoYUQAICG/tdzVaaZ8pu83VmKGOLRgstuwmG0h+1UZG63Cusdouwe5ODk1UVPKi21w2Otchc1a/nhYgO+OagmwVfLqlC7M/BqAUwNRIzt6GjBXFqG2qWY4NzArDt5gp/ZpyNGH2SxJF5grpq1kUz8ZB/EFR2Wo8h9io4kXmCul7FKCYpY2x1w4oDTzjdh9lOePqEtcX1tjMlxCD83AohSzkeA+xRiSMbuCQfULU9LmH+IKA0dR+WfYoxNF5h7ofx9tz/nMP8QVPY6gf9Z9ii40XmHuFU39sf8AxEX98V3Y6jyH2KLjReYe6g31tjPxEP8AEFR2Op/LPsV3Hh8w91U3tqf/ABMPTP7QcVwo6j8s+xXceLzD3VPjrfJBuIs+28VPYqn8s+yIVEPmHuqNfWw/08X98UQoqn8s+yntEI/EPdBkv7Y8mSM/7wohSVXkPsVIng849wl2urZjx5JPyI5oxRVPkd7FT2iAfjHuEF7m35w0Ix7EUQo6gfgd9UQqIPOPdD+JQdHjGf8AWHFF2WpH4D7Fd2iA/iH0VDMhPMq/3hXdjqPyz7Ke0w28Y9wrx3MI4Mye/wBoVBo6j8s+yntMPnHuimaDvPH/AHxQ9jqfyz7Ke0wece6lHRmAWRWXPJVs4pUkEsYu9pHzRMmjee64FBfS9PllaWWzhdz+8UBJo21MzBZriAgdTxON3NBUDStPX7NnBx09Aqe1z+crhSwj8ISOs6THPps8NjbW63DqAjMNoHPP5Zp9NWSNlBkcbJFTSMdGQxoBWTYeH9VtJ45QtrIE7GU88H/VrcOMU401/n6rF+yZzrcfz9Foz2V0/L2UAbp6bluB+FB9rwcroxhU2XW38/RZWoaVeyhTHBGgBOT5xOR+FObi0HqlnC5wN1XRbOe3uneQgoy4YZ5BqjiFSyZvdV7D6aSF3e2XRRGB8B8VjkEbLWuCl7q3zLmAZUGmMdpqgc3ohopDndkGpJUA2XUtNu71Ssuyq1rdbZVQng1JGiEtWgl5vZkJPFLIQcNMLPx1oLKciR1yeRtKuFt2O8r26471pYXwxVM4uyqVzXdndk3XFWKae0dwb+4eNgn6jaM5bnO7rwAMe/NfRHF2mTYLyYIzEuTTx6J8Td/5w5gCAwMobn0knHBLHdtHOBgn2GVF02UDmp7nVdT4el0QNIttNMV8xgARyVA9LDtyaqTiXmrTcjm6FU1/TtKO+R5JUIUlSMkFs9+OmPb3qYZZAuIYRqubEGiefcq1y4hVlMDFWO4dx0/Mn7qt5pso0VWzL7qL8aGEeSzlmdvNBSMgghM8j26d89amN0t9QuOTkreT4cIZRfTZzw7ocY298dPUR9wqAZ+YUWZ1Q44NAECCe6lEo27yoY9l3BfT0/aYJxj0/OpJnvoFNmHcqHi0QPbeXcuY2uGExYEERZJU9ODjAIGfqM1IM1jcISGdVcReHdmGvLkElsFEOepwdpGP7PfPJz2obz8gutH1Vnj8MB9vxdxs2noDndu4BGOm32rh2joFP3fVLXA0I26tbSyCfzEDKST6eNxHHXrRN419QPohdktoiyx+HYy5juJZQHOAC2du04PIwOcDv1qPv7bfsivHdDaLQf0lj4q4FiYc+ZGpLb9w4wRjpu/Ki+/y7aoCWZtyrXKeHvh2FtM4mW2JXfu9cvOQRjHt3xj3qGumLtUT+HyVJE8PraO6XUpuTCCiksVaTaMg8dc7hjpgDnrjs02bbRDaMgqIIdAaGH4q4lWXYpkChiC3q4X09vRn7+tT99c2Gi4CO2qmGDw4AomvZWkyd7AMExk45xn27VBdPyH7Lg2JKWJA1cCxdmiEhwxGCV7ZqripjFG7jAXVzDBIapvD25rpj1r50Nt17tezxUrlRqlciKwIFQVy86b8Ack1wXJG/jeDckikHFNiIclk3GizbFPMZl4qw82SmaovlIm4t1oc10RbZFtpxDG3B596FzblcDYILuHcnFEBZV3PJK2Nxx1qurSAXYOCD3oraIbLSUkBWB5NLO66yMJGK9aAhdZTCd0yq3IP9KnbVQ42GiVfaJMeXGc9yop3GlA0cfdCYo9O6FEZBkB2IDk8gfKo7RN5z7qODH5Qj2pCzBVVR8wMUDp5iNXFdwY7eELbuAJLcb1B6ckVUbUTZvGfdV2xsDvCFzV5FGtyQEXrjlRV5tRNbxn3Vrgx+UKHjjAY+WnHP2RUiomv4z7ruDH5QpiVWkUFE5P9kVJnmP4z7qeDF5QriKMuE8tMdPsj3qONL5j7qODF5QoWKMysDGnAz9gf47Cu40vmPuu4MXlChoohED5adP7Io+LJ5j7qeBF5QvJFEV5iT+7QcaXzH3UcCLyhT5MWG/Vp0/siu48vmPup4EXlCiGGJ+sadDj0jipE0vmPuu4EXlCGsMR3Zij/ALgrjUTDZ5913Bi8oUeTEVGIkHthRwfeo7VP5z7qeBF5QhGGLJXy0wH2/ZHepFTP5z7qeBF5QqGNDn0LxkcKKYJpSNXH3XcCLyhGZY1I/VRnkdV6cVHFlv4j7qezw+UKUwgGxVXJ5wKS97z4iT80TYmNByiyvjFAmL1coUN0qVyhTzUFcrvkBSDg5zUgXUEXCLrY83T45n5fGM0FPo8hV27kLA0sDe9Xptgpj3Q7hj52O2a5my5x1RJf2GKjmiI0VAMKPpUqs5f/2Q== -->
+📜 Descrição
 
-<div class="container">
-    <div class="content" id="description">
-        <h2>📜 Descrição</h2>
-        <p>O <strong>Mercadinho</strong> é uma aplicação web que permite gerenciar um carrinho de compras e processar pagamentos com integração ao Mercado Pago. Oferece uma interface intuitiva para adicionar produtos, verificar disponibilidade de estoque e finalizar compras de forma segura.</p>
-    </div>
+O Mercadinho é uma aplicação web que permite gerenciar um carrinho de compras e processar pagamentos com integração ao Mercado Pago. Oferece uma interface intuitiva para adicionar produtos, verificar disponibilidade de estoque e finalizar compras de forma segura.
+🚀 Funcionalidades
 
-    <div class="content" id="features">
-        <h2>🚀 Funcionalidades</h2>
-        <ul>
-            <li>Gerenciamento de Carrinho: Adicione e remova itens do carrinho.</li>
-            <li>Verificação de Estoque: Confirme a disponibilidade de produtos em estoque.</li>
-            <li>Pagamento: Integração com Mercado Pago para processamento seguro de pagamentos.</li>
-            <li>Responsividade: Interface adaptada para dispositivos móveis e desktops.</li>
-        </ul>
-    </div>
+    Gerenciamento de Carrinho: Adicione e remova itens do carrinho.
+    Verificação de Estoque: Confirme a disponibilidade de produtos em estoque.
+    Pagamento: Integração com Mercado Pago para processamento seguro de pagamentos.
+    Responsividade: Interface adaptada para dispositivos móveis e desktops.
 
-    <div class="content" id="technologies">
-        <h2>🛠 Tecnologias Utilizadas</h2>
-        <ul>
-            <li>Frontend: HTML, CSS, JavaScript</li>
-            <li>Backend: PHP</li>
-            <li>Banco de Dados: MySQL</li>
-            <li>Servidor Web: Apache</li>
-            <li>Integração de Pagamento: Mercado Pago</li>
-        </ul>
-    </div>
+🛠 Tecnologias Utilizadas
 
-    <div class="content" id="setup">
-        <h2>📝 Configuração</h2>
-        <ol>
-            <li><strong>Clonar o Repositório</strong>
-                <pre><code>git clone https://github.com/seu-usuario/mercadinho.git
-cd mercadinho</code></pre>
-            </li>
-            <li><strong>Configurar o Banco de Dados</strong>
-                <p>Crie um banco de dados MySQL chamado <code>mercadinho</code>. Importe o esquema de banco de dados localizado em <code>database/schema.sql</code>.</p>
-            </li>
-            <li><strong>Configurar o Servidor Web</strong>
-                <p>Configure o Apache para servir o projeto. Utilize um arquivo <code>.conf</code> para configurar o VirtualHost.</p>
-            </li>
-            <li><strong>Configurar as Credenciais do Mercado Pago</strong>
-                <pre><code>function sendToMercadoPago($data) {
+    Frontend: HTML, CSS, JavaScript
+    Backend: PHP
+    Banco de Dados: MySQL
+    Servidor Web: Apache
+    Integração de Pagamento: Mercado Pago
+
+📦 Pré-requisitos
+
+Certifique-se de ter as seguintes ferramentas instaladas:
+
+    PHP (8.1 ou superior)
+    MySQL
+    Apache
+    Conta no Mercado Pago
+
+📝 Configuração
+1. Clonar o Repositório
+
+bash
+
+git clone https://github.com/seu-usuario/mercadinho.git
+cd mercadinho
+
+2. Configurar o Banco de Dados
+
+    Crie um banco de dados MySQL chamado mercadinho.
+    Importe o esquema de banco de dados localizado em database/schema.sql.
+
+3. Configurar o Servidor Web
+
+    Configure o Apache para servir o projeto. Utilize um arquivo .conf para configurar o VirtualHost.
+
+4. Configurar as Credenciais do Mercado Pago
+
+    Substitua YOUR_ACCESS_TOKEN no arquivo pagamento/pag.php pelo seu token de acesso do Mercado Pago.
+
+php
+
+function sendToMercadoPago($data) {
     $url = 'https://api.mercadopago.com/checkout/preferences?access_token=YOUR_ACCESS_TOKEN';
     $headers = [
         'Content-Type: application/json',
         'Authorization: Bearer YOUR_ACCESS_TOKEN'
     ];
     // Restante do código...
-}</code></pre>
-            </li>
-        </ol>
-    </div>
+}
 
-    <div class="content" id="structure">
-        <h2>📂 Estrutura do Projeto</h2>
-        <ul>
-            <li><strong>public/</strong> - Contém arquivos públicos acessíveis pela web.
-                <ul>
-                    <li><code>form_carrinho.js</code> - JavaScript para manipulação do carrinho.</li>
-                    <li><code>index.html</code> - Página principal.</li>
-                </ul>
-            </li>
-            <li><strong>pagamento/</strong> - Scripts de pagamento.
-                <ul>
-                    <li><code>pag.php</code> - Integração com o Mercado Pago.</li>
-                </ul>
-            </li>
-            <li><strong>Core/</strong> - Configuração e banco de dados.
-                <ul>
-                    <li><code>Database.php</code> - Configuração da conexão.</li>
-                </ul>
-            </li>
-            <li><strong>database/</strong> - Scripts de banco de dados.
-                <ul>
-                    <li><code>schema.sql</code> - Esquema do banco de dados.</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+📂 Estrutura do Projeto
 
-    <div class="content" id="usage">
-        <h2>🚀 Uso</h2>
-        <ol>
-            <li><strong>Adicionar Itens ao Carrinho</strong>
-                <p>Utilize a interface para adicionar produtos ao carrinho.</p>
-            </li>
-            <li><strong>Verificar Estoque e Processar Pagamento</strong>
-                <p>Clique no botão de checkout para verificar o estoque e processar o pagamento. Se o estoque estiver disponível, você será redirecionado para o Mercado Pago.</p>
-            </li>
-        </ol>
-    </div>
+    public/ - Contém arquivos públicos acessíveis pela web.
+        form_carrinho.js - JavaScript para manipulação do carrinho.
+        index.html - Página principal.
 
-    <div class="content" id="contribution">
-        <h2>💡 Contribuição</h2>
-        <p>Contribuições são bem-vindas! Para contribuir:</p>
-        <ol>
-            <li>Faça um fork do repositório.</li>
-            <li>Crie uma branch para sua feature (<code>git checkout -b feature/nome-da-feature</code>).</li>
-            <li>Faça suas alterações e teste.</li>
-            <li>Envia um pull request detalhando suas mudanças.</li>
-        </ol>
-    </div>
+    pagamento/ - Scripts de pagamento.
+        pag.php - Integração com o Mercado Pago.
 
-    <div class="content" id="license">
-        <h2>📜 Licença</h2>
-        <p>Este projeto está licenciado sob a Licença MIT. Veja o arquivo <code>LICENSE</code> para mais detalhes.</p>
-    </div>
+    Core/ - Configuração e banco de dados.
+        Database.php - Configuração da conexão.
 
-    <div class="content" id="contact">
-        <h2>📧 Contato</h2>
-        <p>Dúvidas ou sugestões? Abra uma <a href="https://github.com/seu-usuario/mercadinho/issues" target="_blank">issue</a> no GitHub.</p>
-    </div>
-</div>
+    database/ - Scripts de banco de dados.
+        schema.sql - Esquema do banco de dados.
 
-<script>
-    // Função para adicionar animação de rolagem
-    document.addEventListener('DOMContentLoaded', function () {
-        const sections = document.querySelectorAll('.content');
+🚀 Uso
 
-        function revealOnScroll() {
-            const triggerBottom = window.innerHeight / 5 * 4;
+    Adicionar Itens ao Carrinho
 
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
+    Utilize a interface para adicionar produtos ao carrinho.
 
-                if (sectionTop < triggerBottom) {
-                    section.classList.add('visible');
-                } else {
-                    section.classList.remove('visible');
-                }
-            });
-        }
+    Verificar Estoque e Processar Pagamento
 
-        revealOnScroll();
-        window.addEventListener('scroll', revealOnScroll);
-    });
-</script>
+    Clique no botão de checkout para verificar o estoque e processar o pagamento. Se o estoque estiver disponível, você será redirecionado para o Mercado Pago.
 
-</body>
-</html>
+💡 Contribuição
+
+Contribuições são bem-vindas! Para contribuir:
+
+    Faça um fork do repositório.
+    Crie uma branch para sua feature (git checkout -b feature/nome-da-feature).
+    Faça suas alterações e teste.
+    Envie um pull request detalhando suas mudanças.
+
+📜 Licença
+
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+📧 Contato
+
+Dúvidas ou sugestões? Abra uma issue no GitHub.
