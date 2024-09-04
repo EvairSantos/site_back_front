@@ -1,0 +1,256 @@
+/* Estilo geral para o corpo da página */
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo da seção de promoções */
+.promocoes-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f5f5f5; /* Cor de fundo clara para melhor visibilidade */
+    padding: 0; /* Remove o padding se necessário */
+}
+
+/* Estilo do banner de promoções */
+.promocoes-banner {
+    display: grid;
+    width: 100%;
+    height: auto; /* Altura auto para ajustar ao conteúdo */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Sobreposição no banner */
+.promocoes-overlay {
+    position: absolute; /* Posiciona a sobreposição sobre o banner */
+    top: 0; /* Começa no topo do banner */
+    left: 0;
+    width: 100%;
+    height: 50%; /* Ocupa a metade superior do banner */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    z-index: 1; /* Garante que fica sobre o banner */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sobreposição com degradê */
+.promocoes-banner::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Ajuste a altura conforme necessário */
+    background: linear-gradient(180deg, rgba(19, 19, 19, 0) 0%, rgb(255, 255, 255) 100%);
+    z-index: 2; /* Garante que o degradê fique abaixo do carrossel */
+}
+
+/* Estilo do carrossel */
+.promocoes-carrossel {
+    display: flex;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    gap: 15px;
+    padding: 10px 0;
+    justify-content: center; /* Centraliza os itens no carrossel */
+    max-width: 100%; /* Garante que o carrossel não exceda a largura da tela */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões totais */
+    -webkit-overflow-scrolling: touch; /* Habilita rolagem suave em dispositivos móveis */
+    scrollbar-width: none; /* Para Firefox */
+    position: relative; /* Necessário para que o z-index funcione corretamente */
+    z-index: 3; /* Garante que o carrossel fique acima do degradê */
+}
+
+/* Estilo do contêiner do carrossel */
+.carousel-wrapper {
+    position: relative;
+    width: 100vw; /* Extende o carrossel para a largura total da viewport */
+    height: 400px; /* Altura do carrossel no desktop */
+    overflow: hidden;
+    margin-left: calc(50% - 50vw); /* Alinha o carrossel com as bordas do layout */
+    padding: 0; /* Remove o padding extra se necessário */
+}
+
+/* Estilo do contêiner de slides do carrossel */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo de cada slide do carrossel */
+.carousel-slide {
+    flex: 0 0 100vw; /* Cada slide ocupa a largura total da viewport */
+    height: 100%; /* Altura ajustada para preencher o contêiner */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Garante que nada saia do contêiner */
+}
+
+/* Estilo da imagem dentro de cada slide do carrossel */
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir o contêiner, mantendo a proporção e cortando se necessário */
+    display: block;
+}
+
+/* Estilo dos controles do carrossel */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 4; /* Garante que os controles fiquem acima do carrossel */
+}
+
+.carousel-control.left {
+    left: 10px;
+}
+
+.carousel-control.right {
+    right: 10px;
+}
+
+/* Estilo dos indicadores do carrossel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 4; /* Garante que os indicadores fiquem acima do carrossel */
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active, .indicator:hover {
+    background-color: #333;
+}
+
+/* Estilo responsivo para dispositivos móveis */
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        height: 250px; /* Altura ajustada para dispositivos móveis */
+    }
+
+    .carousel-slide {
+        height: 100%; /* Altura ajustada para preencher o contêiner */
+    }
+
+    .carousel-control {
+        font-size: 20px;
+        padding: 4px;
+    }
+
+    .carousel-indicators .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Estilo da seção de promoções com CSS Grid */
+.promocoes-banner {
+    display: grid;
+    width: 100%;
+    height: auto; /* Altura auto para ajustar ao conteúdo */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo do container de promoções */
+.promocoes-container {
+    margin-bottom: 20px; /* Espaço abaixo do texto */
+    padding: 0 2px; /* Adiciona espaçamento lateral para evitar bordas grudadas */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos nas dimensões totais */
+}
+
+/* Estilo do texto de promoções */
+.promocoes-text {
+    display: inline-block;
+    font-size: 48px; /* Ajuste o tamanho conforme necessário */
+    font-weight: bold;
+    color: #003366; /* Cor azul escuro */
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    animation: typing 5s steps(30, end) infinite, pulse 0.75s ease-in-out infinite;
+}
+
+/* Estilo da barra de rolagem para WebKit (Chrome, Safari) */
+.promocoes-carrossel::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem */
+}
+
+/* Estilo de cada item no carrossel */
+.promocao-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 0 0 auto; /* Impede o item de encolher ou crescer */
+    width: 250px; /* Aumenta a largura fixa dos itens proporcionalmente */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transição suave para a sombra e transformação */
+    scroll-snap-align: center; /* Garante que o item se alinhe ao centro do carrossel */
+}
+
+/* Efeito de foco e hover nos itens do carrossel */
+.promocao-item:hover {
+    transform: scale(1.02); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para destacar o item */
+}
+
+/* Remove a interação visual do clique no produto */
+.promocao-item:active,
+.promocao-item:focus {
+    outline: none; /* Remove o contorno de foco */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Mantém a sombra padrão ao clicar */
+}
+
+/* Ajuste das imagens dentro dos itens */
+.promocao-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Ajusta a altura máxima da imagem para evitar que fique muito pequena */
+    object-fit: contain; /* Ajusta a imagem sem cortá-la, mantendo suas proporções */
+    transition: opacity 0.3s ease; /* Suaviza a transição de opacidade da imagem */
+}
+
+/* Estilo das informações dentro do item */
+.promocao-info {
+    padding: 10px;
+    transition: opacity 0.3s ease; /* Suaviza a transição de opacidade do texto */
+}
+
+.promocao-info h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #333; /* Cor do título */
+}
+
+.promocao-info p {
+    font-size: 14px;
+    color: #666; /* Cor da descrição */
+}

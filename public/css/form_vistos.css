@@ -1,0 +1,64 @@
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px;
+}
+
+.banner-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px; /* Espaço entre os produtos */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.product-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.product-carousel .product {
+    flex: 0 0 auto; /* Impede que os itens se ajustem ao tamanho do contêiner */
+    width: 20%; /* Ajusta a largura para exibir vários produtos visíveis no desktop */
+    max-width: 200px; /* Define uma largura máxima para os produtos */
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 768px) {
+    .banner-container {
+        height: 200px; /* Ajusta a altura do banner em dispositivos móveis */
+    }
+
+
+    .product-carousel .product {
+        width: calc(50% - 10px); /* Ajusta a largura dos produtos para exibir dois produtos visíveis */
+        max-width: none; /* Remove o limite máximo de largura para os produtos móveis */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-container {
+        height: 150px; /* Ajusta a altura do banner em dispositivos móveis menores */
+    }
+
+
+    .product-carousel .product {
+        width: calc(50% - 10px); /* Ajusta a largura dos produtos para exibir dois produtos visíveis */
+    }
+}
+
+
+

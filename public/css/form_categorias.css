@@ -1,0 +1,143 @@
+/* Estilo para a seção de categorias */
+.categories-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Cor de fundo leve para contraste */
+}
+
+/* Estilo para a lista de categorias */
+.categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: space-between; /* Distribui os itens igualmente ao longo da linha */
+}
+
+/* Estilo de cada item dentro da lista */
+.category-item {
+    flex: 0 1 calc(50% - 20px); /* Largura flexível para dois itens por linha com espaçamento */
+    display: flex;
+    flex-direction: column; /* Alinha a imagem e o texto em coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Mantém a cor do texto */
+    background-color: #ffffff; /* Cor de fundo branca para destaque */
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para profundidade */
+    overflow: hidden; /* Garante que a imagem e o texto não ultrapassem os limites */
+    padding: 10px; /* Adiciona um pouco de preenchimento interno */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para efeitos de hover */
+}
+
+/* Remove o sublinhado do link dentro do item */
+.category-link {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    outline: none; /* Remove a borda de foco */
+    box-shadow: none; /* Remove qualquer sombra de foco */
+}
+
+/* Remove o destaque de foco ao clicar */
+.category-link:focus,
+.category-link:active {
+    outline: none; /* Remove a borda de foco */
+    box-shadow: none; /* Remove a sombra de foco */
+}
+
+/* Remove o destaque de foco ao clicar (para todos os navegadores) */
+.category-link:focus-visible {
+    outline: none; /* Remove a borda de foco */
+}
+
+/* Remove o destaque de foco ao clicar (para navegadores que aplicam estilo ao link em foco) */
+.category-link::-moz-focus-inner {
+    border: 0; /* Remove a borda interna do foco */
+}
+
+/* Imagem da categoria com borda branca e cantos arredondados */
+.category-image {
+    width: 100%; /* Imagem ocupa toda a largura disponível dentro do item */
+    height: 150px; /* Altura fixa para consistência */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível */
+    border-radius: 12px 12px 0 0; /* Arredonda os cantos superiores da imagem */
+    border: 3px solid #ffffff; /* Adiciona uma borda branca mais fina */
+    margin-bottom: 10px; /* Espaçamento inferior para separar da descrição */
+}
+
+/* Nome da categoria */
+.category-name {
+    font-size: 18px; /* Tamanho da fonte ajustado para melhor legibilidade */
+    font-weight: bold;
+    margin: 0; /* Remove a margem */
+    padding: 10px 0; /* Espaçamento superior e inferior */
+    background-color: transparent; /* Remove o fundo branco */
+    width: 100%; /* Ocupa toda a largura disponível do item */
+    text-align: center; /* Centraliza o texto */
+    color: #333; /* Cor do texto ajustada para contraste */
+    text-shadow: 1px 1px 2px rgba(0, 0, 255, 0.3); /* Adiciona uma leve sombra azul ao texto */
+}
+
+/* Ajuste apenas para dispositivos móveis */
+@media (max-width: 768px) {
+    .categories-list {
+        gap: 10px; /* Reduz o espaçamento entre os itens em dispositivos móveis */
+    }
+
+    .category-item {
+        flex: 0 1 calc(50% - 10px); /* Largura dos itens ajustada para dois itens por linha */
+    }
+
+    .category-image {
+        height: 150px; /* Mantém a altura consistente */
+    }
+
+    .category-name {
+        font-size: 18px; /* Ajuste no tamanho da fonte para melhor legibilidade */
+        padding: 10px 0; /* Ajuste o espaçamento superior e inferior */
+    }
+}
+
+/* Estilo para a seção de pagamento e frete grátis */
+.payment-shipping-section {
+    display: flex; /* Utiliza Flexbox para alinhar os itens em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Adiciona um pouco de preenchimento ao redor da seção */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
+}
+
+/* Estilo para cada método de pagamento e frete grátis */
+.payment-method, .free-shipping {
+    flex: 1 1 45%; /* Flexível para ocupar aproximadamente 45% da largura disponível */
+    max-width: 500px; /* Largura máxima para evitar expansão excessiva em telas grandes */
+    text-align: center; /* Centraliza o texto dentro dos itens */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+}
+
+/* Estilo da imagem dentro dos métodos de pagamento e frete grátis */
+.payment-method img, .free-shipping img {
+    max-width: 100%; /* Faz com que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 10px; /* Espaço abaixo da imagem */
+}
+
+/* Estilo dos textos */
+.payment-method p, .free-shipping p {
+    font-size: 14px; /* Tamanho da fonte */
+    margin: 0 0 10px; /* Remove margens laterais e adiciona margem inferior */
+    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+}
+
+/* Estilo dos links */
+.payment-method a {
+    color: #007bff; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 14px; /* Tamanho da fonte */
+    display: block; /* Faz com que o link ocupe a largura total do contêiner */
+    margin-top: 10px; /* Espaço acima do link */
+}
+
+/* Estilo para o link ao passar o mouse */
+.payment-method a:hover {
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
+

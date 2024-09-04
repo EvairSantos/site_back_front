@@ -1,0 +1,233 @@
+/* Estilo para o título do carrinho de compras */
+.cart-title {
+    font-size: 24px; /* Tamanho da fonte menor para um estilo mais elegante */
+    font-weight: normal; /* Fonte mais leve */
+    color: #333; /* Cor do texto, ajuste conforme necessário */
+    padding: 15px; /* Espaçamento interno para aumentar a área da div */
+    margin: 0; /* Remove a margem padrão */
+    border-bottom: 1px solid #ddd; /* Borda inferior suave para separação */
+    text-align: center; /* Centraliza o texto */
+    background: #f8f9fa; /* Fundo claro para uma aparência elegante */
+    border-radius: 4px; /* Bordas arredondadas para suavizar o estilo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve para um efeito de profundidade */
+}
+
+/* Estilização geral do carrinho */
+#shopping-cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh; /* Altura total da tela */
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none; /* Inicialmente escondido */
+    z-index: 1000;
+    overflow-y: auto; /* Permite rolar o conteúdo se necessário */
+}
+/* Estilo para a mensagem de erro */
+#error-message {
+    display: none; /* Inicialmente escondido */
+    color: #dc3545; /* Cor do texto em vermelho */
+    background: #f8d7da; /* Fundo rosa claro para destacar o erro */
+    border: 1px solid #f5c6cb; /* Borda rosa claro */
+    border-radius: 2px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    font-weight: bold; /* Texto em negrito */
+    position: absolute; /* Posiciona o elemento acima dos outros */
+    width: calc(100% - 20px); /* Ajusta a largura para não ficar encostado nas bordas */
+    max-width: 300px; /* Largura máxima para não ocupar a tela toda */
+    top: 10px; /* Espaçamento do topo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para realmente centralizar */
+    z-index: 1000; /* Garante que o elemento esteja acima dos outros */
+}
+
+#shopping-cart.active {
+    display: block;
+}
+
+#cart-items {
+    padding: 10px;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cart-item-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cart-item-content {
+    display: flex;
+    width: 100%;
+    position: relative; /* Necessário para posicionamento absoluto do preço */
+}
+
+.cart-item-image img {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: cover;
+}
+
+.cart-item-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ocupa o espaço restante à direita da imagem */
+    margin-left: 10px;
+    position: relative; /* Necessário para posicionamento absoluto do preço */
+}
+
+.cart-item-price {
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px; /* Ajuste o espaçamento conforme necessário */
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 4px; /* Bordas arredondadas */
+    background: transparent; /* Fundo transparente */
+}
+
+.cart-item-footer {
+    display: flex;
+    justify-content: space-between; /* Espaça os botões e a quantidade */
+    align-items: center;
+    padding: 0; /* Remove o padding se necessário */
+    margin: 0; /* Remove a margem se necessário */
+    background: transparent; /* Fundo transparente */
+    border-top: none; /* Remove a borda superior */
+}
+
+/* Contêiner para a quantidade e botão de remover */
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; /* Borda contínua ao redor dos controles */
+    border-radius: 4px; /* Bordas arredondadas */
+    background: transparent; /* Fundo transparente */
+}
+
+/* Estilo específico para a quantidade */
+.cart-item-quantity {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: none; /* Remove a borda interna */
+    padding: 5px;
+    margin: 0;
+    height: 30px;
+}
+
+/* Botões de aumentar e diminuir quantidade */
+.quantity-decrease,
+.quantity-increase {
+    background: transparent;
+    border: 1px solid #ddd; /* Borda suave */
+    color: #007bff; 
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+}
+
+/* Campo de entrada da quantidade */
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    background: transparent;
+    border: 1px solid #ddd; /* Borda suave */
+    margin: 0 5px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+/* Botão de remover do carrinho */
+.remove-from-cart {
+    background: transparent;
+    border: 1px solid #ddd; /* Borda suave */
+    color: #dc3545;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+/* Estilo para o resumo do carrinho */
+.cart-summary {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 10px;
+    border-top: 1px solid #ddd; /* Borda superior opcional */
+    background: #fff; /* Fundo branco para melhor contraste */
+    z-index: 1000; /* Garante que o resumo fique sobre outros elementos */
+}
+
+/* Preço total */
+.total-price {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px; /* Diminuído para ajustar o tamanho */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+/* Contêiner para os botões no resumo do carrinho */
+.cart-summary-buttons {
+    display: flex;
+    width: 100%; /* Garante que os botões usem a largura total do contêiner */
+    justify-content: space-between; /* Alinha os botões nas bordas esquerda e direita */
+}
+
+/* Estilo dos botões do resumo do carrinho */
+.finalize-order,
+.clear-cart {
+    background: #007bff; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto dos botões */
+    border: none;
+    padding: 8px 16px; /* Ajuste de padding para evitar quebra de texto */
+    cursor: pointer;
+    font-size: 14px; /* Diminuído para ajustar o tamanho */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: background 0.3s ease;
+    white-space: nowrap; /* Impede a quebra de linha no texto dos botões */
+}
+
+/* Estilo específico para o botão de limpar carrinho */
+.clear-cart {
+    background: #dc3545; /* Cor de fundo para o botão de limpar carrinho */
+}
+
+/* Efeito ao passar o mouse */
+.finalize-order:hover,
+.clear-cart:hover {
+    background: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.clear-cart:hover {
+    background: #c82333; /* Cor de fundo ao passar o mouse para o botão de limpar carrinho */
+}
+/* Oculta o botão de fechar carrinho */
+#close-cart {
+    display: none;
+}

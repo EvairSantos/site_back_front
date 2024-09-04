@@ -1,0 +1,257 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o header */
+.header {
+    background-color: #ffe600; /* Cor de fundo amarela */
+    padding: 20px 0 10px; /* Padding superior e inferior */
+    width: 100%; /* Garante que o header ocupe toda a largura */
+    position: relative; /* Adiciona contexto de posicionamento */
+}
+
+/* Container do header com grid layout */
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 25%, 50%, 25% da largura */
+    align-items: center;
+    column-gap: 20px; /* Espaçamento entre colunas */
+    padding: 0 5%; /* Margem lateral */
+    width: 100%; /* Garante que o container ocupe toda a largura */
+}
+
+/* Estilo para o logo */
+.logo {
+    display: flex;
+    align-items: flex-start; /* Alinha o logo com o topo do header */
+    padding-left: 30%; /* Espaço à esquerda do logo */
+}
+
+/* Estilo para a imagem do logo */
+.logo-img {
+    max-height: 50px; /* Ajusta a altura do logo */
+    width: auto;
+    cursor: pointer;
+}
+
+/* Estilo para o formulário de pesquisa */
+#search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o formulário */
+}
+
+/* Container para o campo de pesquisa e ícone */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo para o campo de pesquisa */
+#search-input {
+    width: 100%;
+    padding: 10px 40px 10px 15px; /* Espaço para o ícone da lupa */
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+/* Estilo para o botão de ícone de busca */
+.search-icon {
+    position: absolute;
+    right: 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Estilo para o ícone da lupa */
+.search-icon img {
+    height: 20px;
+    width: auto;
+}
+
+/* Estilo para o ícone do carrinho de compras e contador */
+.cart-notification {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha o carrinho à direita */
+    padding-right: 30%; /* Espaço à direita do carrinho */
+}
+
+/* Estilo para a imagem do carrinho */
+.cart-notification img {
+    max-height: 40px; /* Ajusta a altura do ícone do carrinho */
+    width: auto;
+    cursor: pointer;
+}
+
+/* Estilo para o contador do carrinho */
+.cart-count {
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: -10px; /* Posição do contador ao lado do ícone do carrinho */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-container {
+        grid-template-columns: 1fr 2fr 1fr; /* Layout ajustado para dispositivos móveis */
+    }
+    
+    #search-input {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        padding: 8px 40px 8px 10px; /* Ajusta o padding */
+    }
+    
+    .cart-count {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+        padding: 1px 4px; /* Ajusta o padding */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo da seção com degradê */
+.gradient-section {
+    background: linear-gradient(to bottom, #ffe600, #f9f9f9); /* Degradê vertical */
+    padding: 0;
+    position: relative; /* Garante que o degradê cobre toda a área */
+    height: auto; /* Ajusta a altura conforme o conteúdo */
+}
+
+/* Estilo geral da nova seção de categorias */
+.new-categories-section {
+    padding: 0; /* Remove qualquer padding */
+    margin: 0; /* Remove qualquer margem */
+    overflow: hidden; /* Garante que o carrossel não exiba barras de rolagem verticais */
+    text-align: center; /* Centraliza o conteúdo */
+    height: calc(100% - 20px); /* Ajusta a altura da seção reduzindo 20px */
+}
+
+/* Estilo do Carrossel */
+.new-categories-carousel {
+    display: flex;
+    overflow-x: auto; /* Permite rolagem horizontal */
+    scroll-behavior: smooth; /* Rolagem suave */
+    -webkit-overflow-scrolling: touch; /* Suporte para rolagem suave em iOS */
+    gap: 10px; /* Espaçamento entre os itens */
+    padding: 10px 0; /* Espaçamento superior e inferior */
+    align-items: flex-start; /* Alinha os itens pela borda superior */
+    scroll-snap-type: x mandatory; /* Força o carrossel a parar nos itens */
+    justify-content: center; /* Centraliza o conteúdo do carrossel */
+}
+
+/* Estilo da lista de categorias */
+.new-categories-list {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os itens */
+    align-items: flex-start; /* Alinha todos os itens pela borda superior */
+    scroll-snap-type: x mandatory; /* Força o carrossel a parar nos itens */
+}
+
+/* Estilo do item da categoria */
+.new-category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px; /* Bordas arredondadas para o item */
+    padding: 8px; /* Reduzido para manter a proporcionalidade */
+    transition: transform 0.2s ease-in-out; /* Transição suave ao passar o mouse */
+    max-width: 100px; /* Largura máxima ajustada */
+    background: transparent; /* Remove o fundo branco */
+    scroll-snap-align: start; /* Garante que os itens se alinhem corretamente */
+}
+
+/* Remove o sublinhado dos links */
+.new-category-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Remove a área visível do toque */
+.new-category-link:focus,
+.new-category-link:active {
+    outline: none; /* Remove o contorno de foco */
+    background: transparent; /* Garante que não haja fundo quando o link está em foco ou ativo */
+}
+
+/* Adiciona uma margem ao texto para evitar sobreposição com a imagem */
+.new-category-name {
+    font-size: 12px; /* Ajustado para melhor visualização proporcional */
+    font-weight: bold;
+    color: #333;
+    margin-top: 4px; /* Espaço entre a imagem e o nome */
+}
+
+/* Imagem da categoria */
+.new-category-image {
+    width: 64px; /* Ajustado para dispositivos móveis */
+    height: 64px; /* Ajustado para dispositivos móveis */
+    object-fit: cover; /* Preenche o contêiner sem distorcer a imagem */
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 1023px) {
+    .new-categories-carousel {
+        gap: 5px; /* Diminui o espaçamento entre os itens em dispositivos móveis */
+        padding: 5px 0; /* Ajusta o espaçamento superior e inferior */
+    }
+
+    .new-category-item {
+        min-width: 80px; /* Ajusta a largura mínima dos itens para telas menores */
+    }
+
+    .new-category-image {
+        width: 48px; /* Ajusta a largura da imagem para dispositivos móveis */
+        height: 48px; /* Ajusta a altura da imagem para dispositivos móveis */
+    }
+
+    .new-category-name {
+        font-size: 10px; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    }
+}
+
+/* Ajustes específicos para mobile */
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    .search-bar {
+        margin-right: 0; /* Remove a margem direita */
+        margin-bottom: 10px; /* Adiciona um espaço entre a barra de pesquisa e o carrinho */
+    }
+
+    .header-right {
+        width: 100%; /* Faz o container ocupar toda a largura */
+        justify-content: flex-end; /* Alinha o carrinho à direita */
+    }
+}
