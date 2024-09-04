@@ -1,0 +1,25 @@
+{
+    "require": {
+        "php": ">=7.4",
+        "vlucas/phpdotenv": "^5.4",
+        "monolog/monolog": "^2.3",
+        "phpoffice/phpspreadsheet": "^1.20",
+        "tecnickcom/tcpdf": "^6.7",
+        "mpdf/mpdf": "^8.2",
+        "cboden/ratchet": "^0.4.4",
+        "mercadopago/dx-php": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Controllers\\": "src/Controllers/",
+            "Models\\": "src/Models/",
+            "Core\\": "src/Core/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8000 -t public",
+        "test": "phpunit"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
