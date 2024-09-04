@@ -33,7 +33,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 bash
 
-git clone https://github.com/seu-usuario/mercadinho.git
+git clone [https://github.com/seu-usuario/mercadinho.git](https://github.com/EvairSantos/site_back_front.git)
 cd mercadinho
 
 2. Configurar o Banco de Dados
