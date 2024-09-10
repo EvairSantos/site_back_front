@@ -4,9 +4,9 @@
 date_default_timezone_set('America/Sao_Paulo');
 
 // https://www.mercadopago.com.br/settings/account/credentials
-$acess_token = "APP_USR-8816323497854039-090211-844e56bcac7ded3f9eda5e74e63faa1a-240106584";
+$acess_token = "";
 
 // o mercadopago envia uma notifição toda vez que houver uma mudança na transação, este seria seu URL com o script para receber essa notificação
-$notification_url = "https://saas.techxx.com.br/webhook.php";
+$notification_url = "";
     // ***obrigatorio***
 ?>
